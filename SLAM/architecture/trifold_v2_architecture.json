@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "architecture": "TriFold-3D-v2",
+  "date": "2026-08-12",
+  "status": "simulation baseline, not a fabricated product",
+  "die": {
+    "footprint_mm": [16.0, 16.0],
+    "tiers": [
+      {"id": "T2", "process_nm": 5, "thickness_um": 50, "role": "complete CPU/GPU/NPU compute clusters", "cooling_order": 0},
+      {"id": "T1", "process_nm": 6, "thickness_um": 50, "role": "capacity SRAM/cache, directory and packet NoC", "cooling_order": 1},
+      {"id": "T0", "process_nm": 12, "thickness_um": 100, "role": "HBM controllers, IOMMU/DMA, package PHY, PMU and RAS", "cooling_order": 2}
+    ]
+  },
+  "compute": {
+    "cpu": {"endpoint": 35, "cores": 8, "type": "out-of-order", "smt": 2, "clock_GHz": 3.0, "private_L2_MiB": 8, "peak_power_W": 35},
+    "gpu": {"endpoint": 0, "compute_units": 32, "fp32_lanes": 2048, "clock_GHz": 1.5, "peak_fp32_TFLOPs": 6.144, "peak_power_W": 70},
+    "npu": {"endpoint": 18, "int8_macs": 16384, "clock_GHz": 1.0, "peak_int8_TOPS": 32.768, "peak_power_W": 20}
+  },
+  "memory": {
+    "cpu_shared_LLC_MiB": 16,
+    "gpu_L2_MiB": 16,
+    "npu_scratchpad_MiB": 16,
+    "cross_device_shared_SRAM_MiB": 16,
+    "external_memory": "2 HBM3 stacks, 64 GiB target, 819.2 GB/s aggregate model"
+  },
+  "consistency": {
+    "cpu_domain": "MESI-like coherent private caches plus directory-backed LLC abstraction",
+    "gpu_npu": "shared physical address space but not fine-grain hardware coherent",
+    "cross_device_transfer": "DMA plus producer-release/consumer-acquire ownership and explicit fences"
+  },
+  "network": {
+    "address_count": 36,
+    "baseline_routing": 4,
+    "experimental_reconfigurable_routing": 5,
+    "virtual_channels": 3,
+    "input_buffer_flits": 12,
+    "output_buffer_flits": 12,
+    "flit_units_of_64bit": 4,
+    "topology_file": "trifold_v2_baseline.gv",
+    "reconfiguration_file": "trifold_v2_reconfiguration.txt"
+  },
+  "constraints": {
+    "package_power_limit_W": 160,
+    "nominal_application_power_W": 120,
+    "temperature_limit_C": 90,
+    "pdn_max_droop_percent": 5,
+    "hybrid_bond_target_pitch_um": 5,
+    "power_tsv_pitch_um": 100
+  }
+}

@@ -1,0 +1,23 @@
+# LegoSim generated files
+SLAM/app/bin/
+SLAM/app/obj/
+SLAM/app/cuobj/
+SLAM/app/proc_r*_p*_t*/
+SLAM/app/bench.txt
+SLAM/app/delayInfo.txt
+SLAM/app/buffer*
+SLAM/app/message_record.txt
+SLAM/app/pacCountInfo.txt
+
+# Power / thermal traces can be very large
+*.log
+*.log.gz
+*.ptrace
+*.ttrace
+*.steady
+
+# Editors and Python
+.vscode/
+.idea/
+__pycache__/
+*.pyc

@@ -1,0 +1,25 @@
+schema_version: "1.0"
+application: pi0.5
+inputs:
+  rgb_main:  {shape: [B, 3, 224, 224], semantic: main_camera}
+  rgb_left:  {shape: [B, 3, 224, 224], semantic: left_wrist_camera}
+  rgb_right: {shape: [B, 3, 224, 224], semantic: right_wrist_camera}
+  image_valid_mask:
+    shape_per_camera: [B]
+  robot_state: {shape: [B, 32]}
+  language_tokens: {shape: [B, 200]}
+  token_valid_mask: {shape: [B, 200]}
+  initial_noise:
+    shape: [B, 50, 32]
+    optional: true
+  denoise_steps:
+    default: 10
+outputs:
+  action_sequence: {shape: [B, 50, 32]}
+missing_contract_fields:
+  - tensor_dtype
+  - tensor_layout_and_color_order
+  - token_id_and_tokenizer_version
+  - state_dimension_semantics_and_units
+  - timestamp_and_synchronization_policy
+  - model_commit_and_weight_identifier

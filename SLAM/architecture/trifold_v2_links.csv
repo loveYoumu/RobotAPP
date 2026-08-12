@@ -1,0 +1,8 @@
+link_class,scope,width_bits,lanes_or_channels,clock_GHz,payload_efficiency,one_way_payload_GBps,popnet_weight_cycles,popnet_energy_per_hop_pJ_per_flit,status
+HB_CPU,T2-T1,256,1,2.0,0.80,51.2,1,16.0,design_assumption
+HB_GPU,T2-T1,512,2,2.0,0.80,204.8,1,24.0,design_assumption
+HB_NPU,T2-T1,256,2,2.0,0.80,102.4,1,16.0,design_assumption
+NOC_BASE,T1,256,1,1.5,0.80,38.4,2,32.0,design_assumption
+NOC_EXPRESS,T1,256,1,1.5,0.80,38.4,1,24.0,design_assumption
+T1_T0_MEMORY,T1-T0,256,4,2.0,0.80,409.6,2,28.0,design_assumption
+HBM3_PACKAGE,T0-package,1024,2,3.2,1.00,819.2,8,96.0,abstracted_target

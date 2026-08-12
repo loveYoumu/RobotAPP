@@ -1,0 +1,31 @@
+{
+  "run_location": "cluster SERVER-113",
+  "architecture": "TriFold-3D v2",
+  "gpu_trace_samples": 485,
+  "cpu_repeat": 8,
+  "combined_samples": 4365,
+  "cycles": {
+    "gpu_orb": 4583843,
+    "slam_round_1": 36051220,
+    "slam_round_2": 36017916,
+    "round_difference_percent": 0.092465
+  },
+  "measured_inputs": [
+    "GPUWattch component trace",
+    "Sniper/McPAT CPU totals"
+  ],
+  "engineering_assumptions": {
+    "npu_dynamic_w": 0.0,
+    "reason": "classic ORB-SLAM3 has no neural-network operator",
+    "background_power_w": {
+      "t0_dma_iommu": 0.5,
+      "t0_io_phy": 0.5,
+      "t0_pmu_ras": 1.0,
+      "t1_shared_sram": 0.2
+    },
+    "floorplan": "three 16x16 mm active tiers with two 20um TIM layers and top TIM"
+  },
+  "average_package_power_w": 57.77479950378206,
+  "peak_package_power_w": 732.990248,
+  "peak_warning": "approximate GTX480 GPUWattch XML; not a credible fabricated-target peak"
+}

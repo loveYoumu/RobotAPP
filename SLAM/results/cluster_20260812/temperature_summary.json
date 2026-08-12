@@ -1,0 +1,24 @@
+{
+  "steady": {
+    "max_C": 72.71,
+    "max_block": "t2_gpu_control",
+    "tier0_max_C": 70.48,
+    "tier1_max_C": 72.43,
+    "tier2_max_C": 72.71
+  },
+  "transient_peak": {
+    "max_C": 84.05,
+    "max_block": "t2_gpu_control",
+    "tier0_max_C": 73.73,
+    "tier1_max_C": 80.32,
+    "tier2_max_C": 84.05,
+    "rows": 4365
+  },
+  "transient_last": {
+    "max_C": 73.73,
+    "max_block": "t0_hbm_system",
+    "tier0_max_C": 73.73,
+    "tier1_max_C": 72.77,
+    "tier2_max_C": 72.45
+  }
+}
