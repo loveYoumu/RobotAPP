@@ -1,0 +1,5 @@
+{"id": "cmd001", "audio": "cmd001.wav", "reference": "请前往厨房", "duration_s": 1.752, "source": "edge-tts", "voice": "zh-CN-XiaoxiaoNeural"}
+{"id": "cmd002", "audio": "cmd002.wav", "reference": "把红色杯子拿到桌子上", "duration_s": 2.832, "source": "edge-tts", "voice": "zh-CN-XiaoxiaoNeural"}
+{"id": "cmd003", "audio": "cmd003.wav", "reference": "向左转然后向前走两米", "duration_s": 3.048, "source": "edge-tts", "voice": "zh-CN-XiaoxiaoNeural"}
+{"id": "cmd004", "audio": "cmd004.wav", "reference": "停止移动", "duration_s": 1.536, "source": "edge-tts", "voice": "zh-CN-XiaoxiaoNeural"}
+{"id": "cmd005", "audio": "cmd005.wav", "reference": "打开客厅的灯", "duration_s": 1.872, "source": "edge-tts", "voice": "zh-CN-XiaoxiaoNeural"}
